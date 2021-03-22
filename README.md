@@ -1,12 +1,12 @@
 <!-- TITLE/ -->
-# foo
+# for-each-repo
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
   <p>
-    <a href="https://npmjs.org/package/foo">
+    <a href="https://npmjs.org/package/for-each-repo">
       <img
-        src="https://img.shields.io/npm/v/foo.svg"
+        src="https://img.shields.io/npm/v/for-each-repo.svg"
         alt="npm version"
       >
     </a><img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/for-each-repo/actions">
@@ -16,7 +16,7 @@
       >
     </a><a href="https://codecov.io/gh/dword-design/for-each-repo">
       <img
-        src="https://codecov.io/gh/dword-design/for-each-repo/branch/master/graph/badge.svg"
+        src="https://codecov.io/gh/dword-design/for-each-repo/branch/master/graph/badge.svg?token=I0401P61X7"
         alt="Coverage status"
       >
     </a><a href="https://david-dm.org/dword-design/for-each-repo">
@@ -54,10 +54,10 @@
 
 ```bash
 # npm
-$ npm install foo
+$ npm install for-each-repo
 
 # Yarn
-$ yarn add foo
+$ yarn add for-each-repo
 ```
 <!-- /INSTALL -->
 
