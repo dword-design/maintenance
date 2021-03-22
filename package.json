@@ -31,5 +31,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "baseConfig": {
+    "codecovGraphToken": "I0401P61X7"
   }
 }
