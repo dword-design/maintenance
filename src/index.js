@@ -1,18 +1,24 @@
-import globby from 'globby'
-import sequential from 'promise-sequential'
 import { map } from '@dword-design/functions'
 import execa from 'execa'
-import { remove } from 'fs-extra'
+import globby from 'globby'
+import sequential from 'promise-sequential'
 
 const perFile = path => async () => {
-  await execa.command('yarn upgrade', { stdio: 'inherit', cwd: path })
-  await execa.command('yarn prepare', { stdio: 'inherit', cwd: path })
-  await execa.command('git add .', { stdio: 'inherit', cwd: path })
-  await execa('git', ['commit', '-m', 'fix: update changed files'], { stdio: 'inherit', cwd: path })
-  await execa.command('git push', { stdio: 'inherit', cwd: path })
+  await execa.command('yarn upgrade', { cwd: path, stdio: 'inherit' })
+  await execa.command('yarn prepare', { cwd: path, stdio: 'inherit' })
+  await execa.command('git add .', { cwd: path, stdio: 'inherit' })
+  await execa('git', ['commit', '-m', 'fix: update changed files'], {
+    cwd: path,
+    stdio: 'inherit',
+  })
+  await execa.command('git push', { cwd: path, stdio: 'inherit' })
 }
 
 export default async () => {
-  const paths = await globby('*', { onlyDirectories: true, cwd: 'dword_design_ghorg', absolute: true })
+  const paths = await globby('*', {
+    absolute: true,
+    cwd: 'dword_design_ghorg',
+    onlyDirectories: true,
+  })
   await sequential(paths |> map(perFile))
 }
