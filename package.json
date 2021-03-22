@@ -1,0 +1,36 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "repository": "dword-design/for-each-repo",
+  "funding": "https://www.buymeacoffee.com/dword",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "checkUnknownFiles": "base checkUnknownFiles",
+    "commit": "base commit",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^7.9.7",
+    "@dword-design/functions": "^1.2.2",
+    "execa": "^5.0.0",
+    "globby": "^11.0.3",
+    "promise-sequential": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
