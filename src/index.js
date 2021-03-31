@@ -1,9 +1,9 @@
 import { map } from '@dword-design/functions'
 import execa from 'execa'
-import globby from 'globby'
-import sequential from 'promise-sequential'
-import P from 'path'
 import { copy } from 'fs-extra'
+import globby from 'globby'
+import P from 'path'
+import sequential from 'promise-sequential'
 
 const perFile = path => async () => {
   await copy('.github/workflows', P.resolve(path, '.github/workflows'))
