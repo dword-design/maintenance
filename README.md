@@ -64,7 +64,7 @@ $ yarn add for-each-repo
 <!-- LICENSE/ -->
 ## Contribute
 
-Are you missing something or want to contribute? Feel free to file an [issue](https://github.com/dword-design/for-each-repo/issues) or [pull request](https://github.com/dword-design/for-each-repo/pulls)! ⚙️
+Are you missing something or want to contribute? Feel free to file an [issue](https://github.com/dword-design/for-each-repo/issues) or a [pull request](https://github.com/dword-design/for-each-repo/pulls)! ⚙️
 
 ## Support
 

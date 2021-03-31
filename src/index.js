@@ -2,12 +2,13 @@ import { map } from '@dword-design/functions'
 import execa from 'execa'
 import globby from 'globby'
 import sequential from 'promise-sequential'
+import P from 'path'
+import { copy } from 'fs-extra'
 
 const perFile = path => async () => {
-  await execa.command('yarn upgrade', { cwd: path, stdio: 'inherit' })
-  await execa.command('yarn prepare', { cwd: path, stdio: 'inherit' })
+  await copy('.github/workflows', P.resolve(path, '.github/workflows'))
   await execa.command('git add .', { cwd: path, stdio: 'inherit' })
-  await execa('git', ['commit', '-m', 'fix: update changed files'], {
+  await execa('git', ['commit', '-m', 'chore: update workflows'], {
     cwd: path,
     stdio: 'inherit',
   })
@@ -15,9 +16,10 @@ const perFile = path => async () => {
 }
 
 export default async () => {
+  // gh-repo-clone-all repos --limit 9999 --source --branch renovate/lock-file-maintenance
   const paths = await globby('*', {
     absolute: true,
-    cwd: 'dword_design_ghorg',
+    cwd: 'repos',
     onlyDirectories: true,
   })
   await sequential(paths |> map(perFile))
