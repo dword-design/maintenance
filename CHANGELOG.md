@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dword-design/for-each-repo/compare/v1.0.2...v1.0.3) (2021-04-12)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#5](https://github.com/dword-design/for-each-repo/issues/5)) ([b005dd5](https://github.com/dword-design/for-each-repo/commit/b005dd5a946c9cb4054ce47b1c69ee28e4fa06e0))
+
 ## [1.0.2](https://github.com/dword-design/for-each-repo/compare/v1.0.1...v1.0.2) (2021-03-31)
 
 
