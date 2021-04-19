@@ -28,7 +28,7 @@
     "promise-sequential": "^1.1.1"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.9.7"
+    "@dword-design/base": "^7.13.2"
   },
   "publishConfig": {
     "access": "public"
