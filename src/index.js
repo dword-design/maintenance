@@ -1,14 +1,15 @@
 import { map } from '@dword-design/functions'
 import execa from 'execa'
-import { copy } from 'fs-extra'
 import globby from 'globby'
-import P from 'path'
 import sequential from 'promise-sequential'
 
 const perFile = path => async () => {
-  await copy('.github/workflows', P.resolve(path, '.github/workflows'))
+  await execa.command('../../node_modules/.bin/base prepare', {
+    cwd: path,
+    stdio: 'inherit',
+  })
   await execa.command('git add .', { cwd: path, stdio: 'inherit' })
-  await execa('git', ['commit', '-m', 'chore: update workflows'], {
+  await execa('git', ['commit', '-m', 'chore: update config files'], {
     cwd: path,
     stdio: 'inherit',
   })
@@ -16,7 +17,10 @@ const perFile = path => async () => {
 }
 
 export default async () => {
-  // gh-repo-clone-all repos --limit 9999 --source --branch renovate/lock-file-maintenance
+  await execa.command(
+    'gh-repo-clone-all repos --limit 9999 --source --branch renovate/lock-file-maintenance'
+  )
+
   const paths = await globby('*', {
     absolute: true,
     cwd: 'repos',

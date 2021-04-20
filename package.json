@@ -23,17 +23,42 @@
   "dependencies": {
     "@dword-design/functions": "^3.0.0",
     "execa": "^5.0.0",
-    "fs-extra": "^9.1.0",
     "globby": "^11.0.3",
     "promise-sequential": "^1.1.1"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.9.7"
+    "@dword-design/base": "^7.9.7",
+    "@dword-design/base-config-app": "^2.0.1",
+    "@dword-design/base-config-component": "^1.1.11",
+    "@dword-design/base-config-component-library": "^1.2.8",
+    "@dword-design/base-config-directive": "^1.0.10",
+    "@dword-design/base-config-docker": "^1.1.4",
+    "@dword-design/base-config-firebase": "^1.1.6",
+    "@dword-design/base-config-nuxt": "^3.0.0",
+    "@dword-design/base-config-sass": "^2.0.24",
+    "@dword-design/base-config-server": "^1.0.12",
+    "@dword-design/base-config-web-extension": "^1.10.12",
+    "@dword-design/base-config-wordpress-theme": "^1.2.10"
   },
   "publishConfig": {
     "access": "public"
   },
   "baseConfig": {
-    "codecovGraphToken": "I0401P61X7"
+    "codecovGraphToken": "I0401P61X7",
+    "depcheckConfig": {
+      "ignoreMatches": [
+        "@dword-design/base-config-app",
+        "@dword-design/base-config-component",
+        "@dword-design/base-config-component-library",
+        "@dword-design/base-config-directive",
+        "@dword-design/base-config-docker",
+        "@dword-design/base-config-firebase",
+        "@dword-design/base-config-nuxt",
+        "@dword-design/base-config-sass",
+        "@dword-design/base-config-server",
+        "@dword-design/base-config-web-extension",
+        "@dword-design/base-config-wordpress-theme"
+      ]
+    }
   }
 }
