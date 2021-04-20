@@ -2,7 +2,7 @@
   "name": "for-each-repo",
   "version": "1.0.3",
   "private": true,
-  "description": "",
+  "description": null,
   "repository": "dword-design/for-each-repo",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
@@ -35,5 +35,7 @@
   },
   "baseConfig": {
     "codecovGraphToken": "I0401P61X7"
-  }
+  },
+  "homepage": null,
+  "keywords": []
 }
