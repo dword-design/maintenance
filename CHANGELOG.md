@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/dword-design/for-each-repo/compare/v1.0.3...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* implementation ([#8](https://github.com/dword-design/for-each-repo/issues/8)) ([245d89b](https://github.com/dword-design/for-each-repo/commit/245d89b1c713b36e9c1f23bb799a29435c457099))
+* lock file maintenance ([#11](https://github.com/dword-design/for-each-repo/issues/11)) ([218c67e](https://github.com/dword-design/for-each-repo/commit/218c67e4e5430ac109ac63022ce2f397db37c1e2))
+* updated package.json[description] ([#10](https://github.com/dword-design/for-each-repo/issues/10)) ([f0a72c8](https://github.com/dword-design/for-each-repo/commit/f0a72c8b07896090e4a2cd87f2fba75aaaa8c784))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+
 ## [1.0.3](https://github.com/dword-design/for-each-repo/compare/v1.0.2...v1.0.3) (2021-04-12)
 
 
