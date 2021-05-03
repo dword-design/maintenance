@@ -3,7 +3,7 @@ import execa from 'execa'
 import globby from 'globby'
 import sequential from 'promise-sequential'
 
-const perFile = path => async () => {
+const perPath = path => async () => {
   await execa.command('../../node_modules/.bin/base prepare', {
     cwd: path,
     stdio: 'inherit',
@@ -26,5 +26,5 @@ export default async () => {
     cwd: 'repos',
     onlyDirectories: true,
   })
-  await sequential(paths |> map(perFile))
+  await sequential(paths |> map(perPath))
 }
