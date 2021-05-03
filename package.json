@@ -26,7 +26,7 @@
     "promise-sequential": "^1.1.1"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.9.7",
+    "@dword-design/base": "^8.0.0",
     "@dword-design/base-config-app": "^2.0.1",
     "@dword-design/base-config-component": "^1.1.11",
     "@dword-design/base-config-component-library": "^1.2.8",
@@ -38,6 +38,9 @@
     "@dword-design/base-config-server": "^1.0.12",
     "@dword-design/base-config-web-extension": "^1.10.12",
     "@dword-design/base-config-wordpress-theme": "^1.2.10"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
