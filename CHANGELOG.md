@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/dword-design/for-each-repo/compare/v2.0.0...v2.0.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* only commit workflows ([#15](https://github.com/dword-design/for-each-repo/issues/15)) ([6f68c17](https://github.com/dword-design/for-each-repo/commit/6f68c172f0591e8051c831c57c11fbd0ccf65b3a))
+* update dependency @dword-design/functions to v4 ([#14](https://github.com/dword-design/for-each-repo/issues/14)) ([5cacd37](https://github.com/dword-design/for-each-repo/commit/5cacd37097f1233e800c3b1d5c39d9355d7db2d1))
+
 # [2.0.0](https://github.com/dword-design/for-each-repo/compare/v1.0.3...v2.0.0) (2021-05-03)
 
 
