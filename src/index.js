@@ -8,8 +8,11 @@ const perPath = path => async () => {
     cwd: path,
     stdio: 'inherit',
   })
-  await execa.command('git add .', { cwd: path, stdio: 'inherit' })
-  await execa('git', ['commit', '-m', 'chore: update config files'], {
+  await execa.command('git add .github/workflows', {
+    cwd: path,
+    stdio: 'inherit',
+  })
+  await execa('git', ['commit', '-m', 'chore: update workflows'], {
     cwd: path,
     stdio: 'inherit',
   })

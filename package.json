@@ -2,6 +2,7 @@
   "name": "for-each-repo",
   "version": "2.0.0",
   "private": true,
+  "description": "",
   "repository": "dword-design/for-each-repo",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
