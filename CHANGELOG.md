@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/dword-design/for-each-repo/compare/v2.0.1...v2.0.2) (2021-05-10)
+
+
+### Bug Fixes
+
+* updated package.json[description] ([#16](https://github.com/dword-design/for-each-repo/issues/16)) ([bf24de9](https://github.com/dword-design/for-each-repo/commit/bf24de95c51e49fd242c8437cc35783a6ee5b0b0))
+
 ## [2.0.1](https://github.com/dword-design/for-each-repo/compare/v2.0.0...v2.0.1) (2021-05-04)
 
 
