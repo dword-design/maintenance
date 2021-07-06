@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/dword-design/for-each-repo/compare/v2.0.4...v2.0.5) (2021-07-06)
+
+
+### Bug Fixes
+
+* update config files ([4bd4d12](https://github.com/dword-design/for-each-repo/commit/4bd4d12fda03dc6c955d674b93dbcda5749fa599))
+
 ## [2.0.4](https://github.com/dword-design/for-each-repo/compare/v2.0.3...v2.0.4) (2021-06-14)
 
 
