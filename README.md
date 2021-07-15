@@ -1,12 +1,12 @@
 <!-- TITLE/ -->
-# for-each-repo
+# @dword-design/maintenance
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
   <p>
-    <a href="https://npmjs.org/package/for-each-repo">
+    <a href="https://npmjs.org/package/@dword-design/maintenance">
       <img
-        src="https://img.shields.io/npm/v/for-each-repo.svg"
+        src="https://img.shields.io/npm/v/@dword-design/maintenance.svg"
         alt="npm version"
       >
     </a><img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/maintenance/actions">
@@ -58,10 +58,10 @@
 
 ```bash
 # npm
-$ npm install for-each-repo
+$ npm install @dword-design/maintenance
 
 # Yarn
-$ yarn add for-each-repo
+$ yarn add @dword-design/maintenance
 ```
 <!-- /INSTALL -->
 

@@ -6,12 +6,12 @@
   "license": "MIT",
   "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
   "bin": {
     "maintenance": "./dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "checkUnknownFiles": "base checkUnknownFiles",
     "commit": "base commit",
