@@ -13,6 +13,7 @@ const run = async () => {
     console.error(error.message)
     process.exit(1)
   }
+
   const wrapErrorHandling = command => ({
     ...command,
     handler: async (...args) => {
@@ -37,7 +38,8 @@ const run = async () => {
         },
         {
           arguments: '<glob>',
-          handler: (glob, options) => remove(glob, { quiet: false, ...options }),
+          handler: (glob, options) =>
+            remove(glob, { quiet: false, ...options }),
           name: 'remove',
           options: [{ name: '-m, --message <message>' }],
         },
@@ -46,9 +48,11 @@ const run = async () => {
           name: 'push',
         },
         {
-          handler: options => updateGithubWorkflows({ quiet: false, ...options }),
+          handler: options =>
+            updateGithubWorkflows({ quiet: false, ...options }),
           name: 'update-github-workflows',
         },
       ] |> map(wrapErrorHandling),
   })
 }
+run()
