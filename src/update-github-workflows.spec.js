@@ -3,7 +3,7 @@ import { endent, keys, map, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
-import { ensureDir } from 'fs-extra'
+import { ensureDir, outputFile } from 'fs-extra'
 import globby from 'globby'
 import mockStdio from 'mock-stdio'
 import outputFiles from 'output-files'
@@ -69,6 +69,18 @@ export default tester(
           |> await
           |> property('stdout')
       ).toMatch('chore: update github workflows')
+    },
+    'no workflow changes': async () => {
+      await ensureDir(P.join('repos', 'repo'))
+      await chdir(P.join('repos', 'repo'), async () => {
+        await execa.command('git init')
+        await execa.command('git config user.email "foo@bar.de"')
+        await execa.command('git config user.name "foo"')
+        await outputFile(P.join('.github', 'workflows', 'build.yml'), '')
+        await execa.command('git add .')
+        await execa.command('git commit -m foo')
+      })
+      await self()
     },
   },
   [testerPluginTmpDir()]

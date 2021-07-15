@@ -20,6 +20,23 @@ export default tester(
         'fatal: No configured push destination.'
       )
     },
+    'nothing to push': async () => {
+      await ensureDir(P.join('remotes', 'repo'))
+      await execa.command('git init --bare', {
+        cwd: P.join('remotes', 'repo'),
+      })
+      await execa.command(
+        `git clone ${P.join('remotes', 'repo')} ${P.join('repos', 'repo')}`
+      )
+      await chdir(P.join('repos', 'repo'), async () => {
+        await execa.command('git config user.email "foo@bar.de"')
+        await execa.command('git config user.name "foo"')
+        await outputFile('a.txt', '')
+        await execa.command('git add .')
+        await execa.command('git commit -m foo')
+      })
+      await self()
+    },
     works: async () => {
       const createRepo = async number => {
         await ensureDir(P.join('remotes', `repo${number}`))
