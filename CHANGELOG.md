@@ -1,3 +1,11 @@
+## [2.1.1](https://github.com/dword-design/maintenance/compare/v2.1.0...v2.1.1) (2021-07-15)
+
+
+### Bug Fixes
+
+* console output for clone ([1998004](https://github.com/dword-design/maintenance/commit/1998004078bd4450e83a0eb374ca9eba49ca1500))
+* do not commit removed files if no matches ([1255317](https://github.com/dword-design/maintenance/commit/1255317a43acadbd7abd0699cd05df93389cf8b2))
+
 # [2.1.0](https://github.com/dword-design/maintenance/compare/v2.0.5...v2.1.0) (2021-07-15)
 
 
