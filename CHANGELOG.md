@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/dword-design/maintenance/compare/v2.0.5...v2.1.0) (2021-07-15)
+
+
+### Bug Fixes
+
+* fixes ([e55007d](https://github.com/dword-design/maintenance/commit/e55007dbbd97b9013feb6851315c00550f188ee1))
+* prepare ([6c6c581](https://github.com/dword-design/maintenance/commit/6c6c581b23fe76fe12131ce5f0b2d852f5abd42b))
+
+
+### Features
+
+* refactor to cli tool ([4e51048](https://github.com/dword-design/maintenance/commit/4e510483afd7c488a3fd11b41bdcc0eb3be12477))
+
 ## [2.0.5](https://github.com/dword-design/for-each-repo/compare/v2.0.4...v2.0.5) (2021-07-06)
 
 
