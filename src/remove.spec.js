@@ -1,5 +1,5 @@
 import chdir from '@dword-design/chdir'
-import { endent, map, property } from '@dword-design/functions'
+import { endent, fromPairs, map, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
@@ -40,13 +40,16 @@ export default tester(
 
       `)
       expect(
-        await globby('*/**', {
+        globby('*/**', {
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
           onlyFiles: false,
         })
-      ).toEqual(['repo1/a.txt', 'repo2/a.txt'])
+          |> await
+          |> map(path => [path, true])
+          |> fromPairs
+      ).toEqual({ 'repo1/a.txt': true, 'repo2/a.txt': true })
       await execa.command('git status', { cwd: P.join('repos', 'repo1') })
       await execa.command('git status', { cwd: P.join('repos', 'repo2') })
       expect(
