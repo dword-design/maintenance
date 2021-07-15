@@ -1,3 +1,11 @@
+## [2.1.2](https://github.com/dword-design/maintenance/compare/v2.1.1...v2.1.2) (2021-07-15)
+
+
+### Bug Fixes
+
+* check base version ([7bd65fd](https://github.com/dword-design/maintenance/commit/7bd65fdcd03b0414ed31be90e8f26981dfec59e6))
+* notify if base is out of date ([d0b04f0](https://github.com/dword-design/maintenance/commit/d0b04f05d0ec899463ade5b3e41a952ee62d0108))
+
 ## [2.1.1](https://github.com/dword-design/maintenance/compare/v2.1.0...v2.1.1) (2021-07-15)
 
 
