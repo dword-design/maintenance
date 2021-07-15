@@ -54,8 +54,12 @@ export default tester(
           'repo2/.github/workflows/update.yml',
         ])
       )
-      await execa.command('git status', { cwd: P.join('repos', 'repo1') })
-      await execa.command('git status', { cwd: P.join('repos', 'repo2') })
+      await execa.command('git diff --exit-code', {
+        cwd: P.join('repos', 'repo1'),
+      })
+      await execa.command('git diff --exit-code', {
+        cwd: P.join('repos', 'repo2'),
+      })
       expect(
         execa.command('git log --oneline -n 1', {
           cwd: P.join('repos', 'repo1'),
