@@ -98,6 +98,15 @@ export default tester(
       ),
     'no glob': () =>
       expect(self()).rejects.toThrow('You need to provide a glob.'),
+    'no match': async () => {
+      await ensureDir(P.join('repos', 'repo'))
+      await chdir(P.join('repos', 'repo'), async () => {
+        await execa.command('git init')
+        await execa.command('git config user.email "foo@bar.de"')
+        await execa.command('git config user.name "foo"')
+      })
+      await self('*.txt', { message: 'chore: remove txt files' })
+    },
     wildcard: async () => {
       await ensureDir(P.join('repos', 'repo'))
       await chdir(P.join('repos', 'repo'), async () => {

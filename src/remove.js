@@ -16,12 +16,12 @@ export default async (glob, options) => {
     throw new Error('You need to provide a commit message.')
   }
   await forEachRepo(async () => {
-    await (globby(glob, {
+    const paths = await globby(glob, {
       dot: true,
       expandDirectories: false,
       onlyFiles: false,
     })
-      |> await
+    await (paths
       |> map(path => {
         if (!options.quiet) {
           console.log(`Removing files in ${P.basename(process.cwd())} …`)
@@ -30,7 +30,9 @@ export default async (glob, options) => {
         return remove(path)
       })
       |> Promise.all)
-    await execa.command(`git add ${glob}`)
-    await execa('git', ['commit', '-m', options.message])
+    if (paths.length > 0) {
+      await execa.command(`git add ${glob}`)
+      await execa('git', ['commit', '-m', options.message])
+    }
   })
 }
