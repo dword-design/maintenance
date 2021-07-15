@@ -1,5 +1,5 @@
 import chdir from '@dword-design/chdir'
-import { endent, map, property } from '@dword-design/functions'
+import { endent, keys, map, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
@@ -47,12 +47,14 @@ export default tester(
           onlyFiles: false,
         })
       ).toEqual(
-        expect.arrayContaining([
-          'repo1/.github/workflows/build.yml',
-          'repo1/.github/workflows/update.yml',
-          'repo2/.github/workflows/build.yml',
-          'repo2/.github/workflows/update.yml',
-        ])
+        expect.arrayContaining(
+          {
+            'repo1/.github/workflows/build.yml': true,
+            'repo1/.github/workflows/update.yml': true,
+            'repo2/.github/workflows/build.yml': true,
+            'repo2/.github/workflows/update.yml': true,
+          } |> keys
+        )
       )
       await execa.command('git diff --exit-code', {
         cwd: P.join('repos', 'repo1'),

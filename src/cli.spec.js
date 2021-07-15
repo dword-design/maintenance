@@ -1,6 +1,6 @@
 import basePackageConfig from '@dword-design/base/package.json'
 import chdir from '@dword-design/chdir'
-import { endent, map, property } from '@dword-design/functions'
+import { endent, fromPairs, keys, map, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
@@ -87,13 +87,16 @@ export default tester(
       Removing files in repo2 …
     `)
       expect(
-        await globby('*/**', {
+        globby('*/**', {
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
           onlyFiles: false,
         })
-      ).toEqual(['repo1/a.txt', 'repo2/a.txt'])
+          |> await
+          |> map(path => [path, true])
+          |> fromPairs
+      ).toEqual({ 'repo1/a.txt': true, 'repo2/a.txt': true })
     },
     'update-github-workflows': async () => {
       const createRepo = async number => {
@@ -128,12 +131,14 @@ export default tester(
           onlyFiles: false,
         })
       ).toEqual(
-        expect.arrayContaining([
-          'repo1/.github/workflows/build.yml',
-          'repo1/.github/workflows/update.yml',
-          'repo2/.github/workflows/build.yml',
-          'repo2/.github/workflows/update.yml',
-        ])
+        expect.arrayContaining(
+          {
+            'repo1/.github/workflows/build.yml': true,
+            'repo1/.github/workflows/update.yml': true,
+            'repo2/.github/workflows/build.yml': true,
+            'repo2/.github/workflows/update.yml': true,
+          } |> keys
+        )
       )
     },
   },

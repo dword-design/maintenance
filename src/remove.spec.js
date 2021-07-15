@@ -81,13 +81,16 @@ export default tester(
       })
       await self('foo', { message: 'chore: remove folder' })
       expect(
-        await globby('*/**', {
+        globby('*/**', {
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
           onlyFiles: false,
         })
-      ).toEqual(['repo/a.txt'])
+          |> await
+          |> map(path => [path, true])
+          |> fromPairs
+      ).toEqual({ 'repo/a.txt': true })
     },
     'no commit message': () =>
       expect(self('*')).rejects.toThrow(
@@ -111,13 +114,16 @@ export default tester(
       })
       await self('*.txt', { message: 'chore: remove txt files' })
       expect(
-        await globby('*/**', {
+        (await globby('*/**', {
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
           onlyFiles: false,
-        })
-      ).toEqual(['repo/foo.js'])
+        }))
+          |> await
+          |> map(path => [path, true])
+          |> fromPairs
+      ).toEqual({ 'repo/foo.js': true })
     },
   },
   [testerPluginTmpDir()]
