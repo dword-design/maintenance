@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/dword-design/maintenance/compare/v2.1.2...v2.1.3) (2021-07-17)
+
+
+### Bug Fixes
+
+* do not clone archived repos ([5eb3ddb](https://github.com/dword-design/maintenance/commit/5eb3ddbf84ab628f2dce34c3e8cec572031bfa51))
+
 ## [2.1.2](https://github.com/dword-design/maintenance/compare/v2.1.1...v2.1.2) (2021-07-15)
 
 
