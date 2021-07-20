@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/dword-design/maintenance/compare/v2.1.3...v2.1.4) (2021-07-20)
+
+
+### Bug Fixes
+
+* update config files ([bcd615a](https://github.com/dword-design/maintenance/commit/bcd615ad312274cd717b2a61721a934781ab4a09))
+
 ## [2.1.3](https://github.com/dword-design/maintenance/compare/v2.1.2...v2.1.3) (2021-07-17)
 
 
