@@ -38,6 +38,7 @@
     "@dword-design/functions": "^4.0.0",
     "execa": "^5.0.0",
     "fs-extra": "^10.0.0",
+    "gh-repo-clone-all": "^2.0.7",
     "globby": "^11.0.4",
     "make-cli": "^2.0.7",
     "npm-api": "^1.0.1",

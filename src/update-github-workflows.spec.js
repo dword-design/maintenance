@@ -77,10 +77,15 @@ export default tester(
         await execa.command('git config user.email "foo@bar.de"')
         await execa.command('git config user.name "foo"')
         await outputFile(P.join('.github', 'workflows', 'build.yml'), '')
-        await execa.command('git add .')
-        await execa.command('git commit -m foo')
       })
       await self()
+      mockStdio.start()
+      await self({ quiet: false })
+
+      const output = mockStdio.end()
+      expect(output.stdout).toMatch(
+        'nothing added to commit but untracked files present'
+      )
     },
   },
   [testerPluginTmpDir()]
