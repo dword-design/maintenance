@@ -1,3 +1,10 @@
+## [2.1.7](https://github.com/dword-design/maintenance/compare/v2.1.6...v2.1.7) (2021-08-09)
+
+
+### Bug Fixes
+
+* do not throw on push ([54f8ad0](https://github.com/dword-design/maintenance/commit/54f8ad012cb07486983dec5103544a5bfd83c95c))
+
 ## [2.1.6](https://github.com/dword-design/maintenance/compare/v2.1.5...v2.1.6) (2021-08-09)
 
 
