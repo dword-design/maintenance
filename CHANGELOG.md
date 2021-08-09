@@ -1,3 +1,10 @@
+## [2.1.6](https://github.com/dword-design/maintenance/compare/v2.1.5...v2.1.6) (2021-08-09)
+
+
+### Bug Fixes
+
+* do not throw if commit fails ([d688352](https://github.com/dword-design/maintenance/commit/d68835201b4cb25394a6b5d37768c64886da2bc8))
+
 ## [2.1.5](https://github.com/dword-design/maintenance/compare/v2.1.4...v2.1.5) (2021-08-09)
 
 
