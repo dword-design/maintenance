@@ -1,3 +1,10 @@
+## [2.1.5](https://github.com/dword-design/maintenance/compare/v2.1.4...v2.1.5) (2021-08-09)
+
+
+### Bug Fixes
+
+* fix config dependencies ([1f53f86](https://github.com/dword-design/maintenance/commit/1f53f8690de2d9909ce7326ac18824e6f435077c))
+
 ## [2.1.4](https://github.com/dword-design/maintenance/compare/v2.1.3...v2.1.4) (2021-07-20)
 
 
