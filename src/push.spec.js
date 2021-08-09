@@ -16,9 +16,11 @@ export default tester(
     error: async () => {
       await ensureDir(P.join('repos', 'repo'))
       await execa.command('git init', { cwd: P.join('repos', 'repo') })
-      await expect(self()).rejects.toThrow(
-        'fatal: No configured push destination.'
-      )
+      mockStdio.start()
+      await self({ quiet: false })
+
+      const output = mockStdio.end()
+      expect(output.stderr).toMatch('fatal: No configured push destination.')
     },
     'nothing to push': async () => {
       await ensureDir(P.join('remotes', 'repo'))

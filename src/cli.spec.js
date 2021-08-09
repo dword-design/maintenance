@@ -18,14 +18,7 @@ export default tester(
       expect(
         execa(self, ['base-version']) |> await |> property('stdout')
       ).toEqual(basePackageConfig.version),
-    'push: error': async () => {
-      await ensureDir(P.join('repos', 'repo'))
-      await execa.command('git init', { cwd: P.join('repos', 'repo') })
-      await expect(execa(self, ['push'])).rejects.toThrow(
-        'fatal: No configured push destination.'
-      )
-    },
-    'push: valid': async () => {
+    push: async () => {
       const createRepo = async number => {
         await ensureDir(P.join('remotes', `repo${number}`))
         await execa.command('git init --bare', {

@@ -18,9 +18,8 @@ export default options => {
     try {
       await execa('git', ['commit', '-m', 'chore: update github workflows'])
     } catch (error) {
-      // do not throw error if commit fails
       if (!options.quiet) {
-        console.log(error.message)
+        console.error(error.message)
       }
     }
   })

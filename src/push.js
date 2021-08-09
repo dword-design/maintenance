@@ -7,11 +7,16 @@ import forEachRepo from './for-each-repo'
 export default options => {
   options = { quiet: stdEnv.test, ...options }
 
-  return forEachRepo(() => {
+  return forEachRepo(async () => {
     if (!options.quiet) {
       console.log(`Pushing ${P.basename(process.cwd())} …`)
     }
-
-    return execa.command('git push')
+    try {
+      await execa.command('git push')
+    } catch (error) {
+      if (!options.quiet) {
+        console.error(error.message)
+      }
+    }
   })
 }
