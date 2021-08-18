@@ -7,7 +7,7 @@ export default {
       './base-version': '1.0.0',
     })
     await expect(self()).rejects.toThrow(
-      /^The currently installed base version \(1\.0\.0\) differs from the live version \(\d.\d.\d\)\. Please upgrade @dword-design\/maintenance\.$/
+      /^The currently installed base version \(1\.0\.0\) differs from the live version \(\d+?.\d+?.\d+?\)\. Please upgrade @dword-design\/maintenance\.$/
     )
   },
   'up to date': async () => {
