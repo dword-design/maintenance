@@ -69,7 +69,7 @@ export default tester(
         Pushing repo2 …
         
       `)
-      expect(await globby('*/**', { cwd: 'repos', onlyFiles: false })).toEqual([
+      expect(await globby('*/**', { cwd: 'repos' })).toEqual([
         'repo1/a.txt',
         'repo2/a.txt',
       ])
