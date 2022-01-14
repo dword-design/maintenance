@@ -44,7 +44,6 @@ export default tester(
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
-          onlyFiles: false,
         })
           |> await
           |> map(path => [path, true])
@@ -85,7 +84,6 @@ export default tester(
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
-          onlyFiles: false,
         })
           |> await
           |> map(path => [path, true])
@@ -127,7 +125,6 @@ export default tester(
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
-          onlyFiles: false,
         }))
           |> await
           |> map(path => [path, true])

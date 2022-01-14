@@ -42,10 +42,10 @@ export default tester(
 
       const output = execa(self, ['push']) |> await |> property('stdout')
       expect(output).toEqual(endent`
-      Pushing repo1 …
-      Pushing repo2 …
-    `)
-      expect(await globby('*/**', { cwd: 'repos', onlyFiles: false })).toEqual([
+        Pushing repo1 …
+        Pushing repo2 …
+      `)
+      expect(await globby('*/**', { cwd: 'repos' })).toEqual([
         'repo1/a.txt',
         'repo2/a.txt',
       ])
@@ -84,7 +84,6 @@ export default tester(
           cwd: 'repos',
           dot: true,
           ignore: '*/.git',
-          onlyFiles: false,
         })
           |> await
           |> map(path => [path, true])
