@@ -1,3 +1,10 @@
+## [2.1.8](https://github.com/dword-design/maintenance/compare/v2.1.7...v2.1.8) (2022-01-15)
+
+
+### Bug Fixes
+
+* add base-config-cli ([54aaf1a](https://github.com/dword-design/maintenance/commit/54aaf1a81c0ad80f143a1c322fe61fe737009822))
+
 ## [2.1.7](https://github.com/dword-design/maintenance/compare/v2.1.6...v2.1.7) (2021-08-09)
 
 
