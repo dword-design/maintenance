@@ -24,6 +24,7 @@
   "dependencies": {
     "@dword-design/base": "^8.0.0",
     "@dword-design/base-config-app": "^2.0.1",
+    "@dword-design/base-config-cli": "^1.0.3",
     "@dword-design/base-config-component": "^1.1.11",
     "@dword-design/base-config-component-library": "^1.2.8",
     "@dword-design/base-config-directive": "^1.0.10",
@@ -63,6 +64,7 @@
     "depcheckConfig": {
       "ignoreMatches": [
         "@dword-design/base-config-app",
+        "@dword-design/base-config-cli",
         "@dword-design/base-config-component",
         "@dword-design/base-config-component-library",
         "@dword-design/base-config-directive",
