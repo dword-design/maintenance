@@ -1,3 +1,10 @@
+## [2.1.9](https://github.com/dword-design/maintenance/compare/v2.1.8...v2.1.9) (2022-09-05)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#66](https://github.com/dword-design/maintenance/issues/66)) ([e353ac1](https://github.com/dword-design/maintenance/commit/e353ac158c5f95fd964fee8c00aebf715e00178b))
+
 ## [2.1.8](https://github.com/dword-design/maintenance/compare/v2.1.7...v2.1.8) (2022-01-15)
 
 
