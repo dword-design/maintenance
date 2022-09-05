@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 
+import dotenv from '@dword-design/dotenv-json-extended'
 import { map } from '@dword-design/functions'
 import makeCli from 'make-cli'
+import { Octokit } from 'octokit'
 
 import { baseVersion, clone, push, remove, updateGithubWorkflows } from '.'
+import activateAllWorkflows from './activate-all-workflows'
 import checkBaseVersion from './check-base-version'
+import deactivatedWorkflows from './deactivated-workflows'
+
+dotenv.config()
+
+const octokit = new Octokit({ auth: process.env.GITHUB_API_TOKEN })
 
 const run = async () => {
   try {
@@ -51,6 +59,14 @@ const run = async () => {
           handler: options =>
             updateGithubWorkflows({ quiet: false, ...options }),
           name: 'update-github-workflows',
+        },
+        {
+          handler: () => activateAllWorkflows(octokit),
+          name: 'activate-all',
+        },
+        {
+          handler: async () => console.log(await deactivatedWorkflows(octokit)),
+          name: 'deactivated',
         },
       ] |> map(wrapErrorHandling),
   })

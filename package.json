@@ -36,6 +36,7 @@
     "@dword-design/base-config-web-extension": "^1.10.12",
     "@dword-design/base-config-wordpress-theme": "^1.2.10",
     "@dword-design/chdir": "^2.0.5",
+    "@dword-design/dotenv-json-extended": "^2.0.8",
     "@dword-design/functions": "^4.0.0",
     "execa": "^5.0.0",
     "fs-extra": "^10.0.0",
@@ -43,6 +44,7 @@
     "globby": "^11.0.4",
     "make-cli": "^2.0.7",
     "npm-api": "^1.0.1",
+    "octokit": "^2.0.7",
     "promise-sequential": "^1.1.1",
     "std-env": "^2.3.0"
   },
