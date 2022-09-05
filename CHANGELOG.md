@@ -1,3 +1,11 @@
+## [2.1.10](https://github.com/dword-design/maintenance/compare/v2.1.9...v2.1.10) (2022-09-05)
+
+
+### Bug Fixes
+
+* foo ([8379d1a](https://github.com/dword-design/maintenance/commit/8379d1a6f8b331f618b1b26b93c0cb5ccb095d66))
+* foo ([0b7606c](https://github.com/dword-design/maintenance/commit/0b7606c8809fe96e25fb3e253f76f84bfa4dc328))
+
 ## [2.1.9](https://github.com/dword-design/maintenance/compare/v2.1.8...v2.1.9) (2022-09-05)
 
 
