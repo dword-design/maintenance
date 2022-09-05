@@ -1,0 +1,20 @@
+{
+  "codecovGraphToken": "I0401P61X7",
+  "depcheckConfig": {
+    "ignoreMatches": [
+      "@dword-design/base-config-app",
+      "@dword-design/base-config-cli",
+      "@dword-design/base-config-component",
+      "@dword-design/base-config-component-library",
+      "@dword-design/base-config-directive",
+      "@dword-design/base-config-docker",
+      "@dword-design/base-config-firebase",
+      "@dword-design/base-config-nuxt",
+      "@dword-design/base-config-sass",
+      "@dword-design/base-config-server",
+      "@dword-design/base-config-web-extension",
+      "@dword-design/base-config-wordpress-theme"
+    ]
+  },
+  "supportedNodeVersions": [14, 16]
+}
