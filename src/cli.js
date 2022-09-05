@@ -61,12 +61,27 @@ const run = async () => {
           name: 'update-github-workflows',
         },
         {
-          handler: () => activateAllWorkflows(octokit),
-          name: 'activate-all',
+          handler: () => {
+            if (!process.env.GITHUB_API_TOKEN) {
+              throw new Error(
+                'GitHub API token is missing in environment variables.'
+              )
+            }
+
+            return activateAllWorkflows(octokit)
+          },
+          name: 'activate-all-workflows',
         },
         {
-          handler: async () => console.log(await deactivatedWorkflows(octokit)),
-          name: 'deactivated',
+          handler: async () => {
+            if (!process.env.GITHUB_API_TOKEN) {
+              throw new Error(
+                'GitHub API token is missing in environment variables.'
+              )
+            }
+            console.log(await deactivatedWorkflows(octokit))
+          },
+          name: 'deactivated-workflows',
         },
       ] |> map(wrapErrorHandling),
   })
