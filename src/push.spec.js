@@ -1,5 +1,5 @@
 import chdir from '@dword-design/chdir'
-import { endent, map } from '@dword-design/functions'
+import { endent, fromPairs, map } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
@@ -69,10 +69,15 @@ export default tester(
         Pushing repo2 …
         
       `)
-      expect(await globby('*/**', { cwd: 'repos' })).toEqual([
-        'repo1/a.txt',
-        'repo2/a.txt',
-      ])
+      expect(
+        globby('*/**', { cwd: 'repos' })
+          |> await
+          |> map(path => [path, true])
+          |> fromPairs
+      ).toEqual({
+        'repo1/a.txt': true,
+        'repo2/a.txt': true,
+      })
     },
   },
   [testerPluginTmpDir()]
