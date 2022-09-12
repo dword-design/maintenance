@@ -13,9 +13,9 @@ export default options => {
         `Updating GitHub workflows for ${P.basename(process.cwd())} …`
       )
     }
-    await execa.command('base prepare')
-    await execa.command('git add .github/workflows')
     try {
+      await execa.command('yarn --frozen-lockfile')
+      await execa.command('git add .github/workflows')
       await execa('git', ['commit', '-m', 'chore: update github workflows'])
     } catch (error) {
       if (!options.quiet) {
