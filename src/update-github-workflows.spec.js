@@ -83,9 +83,7 @@ export default tester(
       await self({ quiet: false })
 
       const output = mockStdio.end()
-      expect(output.stderr).toMatch(
-        'nothing added to commit but untracked files present'
-      )
+      expect(output.stderr).toMatch('nothing to commit, working tree clean')
     },
   },
   [testerPluginTmpDir()]

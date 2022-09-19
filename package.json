@@ -22,7 +22,6 @@
     "test": "base test"
   },
   "dependencies": {
-    "@dword-design/base": "^8.0.0",
     "@dword-design/chdir": "^2.0.5",
     "@dword-design/dotenv-json-extended": "^2.0.8",
     "@dword-design/functions": "^4.0.0",
@@ -31,13 +30,12 @@
     "gh-repo-clone-all": "^2.0.7",
     "globby": "^11.0.4",
     "make-cli": "^2.0.7",
-    "npm-api": "^1.0.1",
     "octokit": "^2.0.7",
     "promise-sequential": "^1.1.1",
     "std-env": "^2.3.0"
   },
   "devDependencies": {
-    "@dword-design/proxyquire": "^2.0.6",
+    "@dword-design/base": "^8.0.0",
     "@dword-design/tester": "^2.0.7",
     "@dword-design/tester-plugin-tmp-dir": "^2.1.2",
     "mock-stdio": "^1.0.3",

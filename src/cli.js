@@ -5,23 +5,15 @@ import { map } from '@dword-design/functions'
 import makeCli from 'make-cli'
 import { Octokit } from 'octokit'
 
-import { baseVersion, clone, push, remove, updateGithubWorkflows } from '.'
+import { clone, push, remove, updateGithubWorkflows } from '.'
 import activateAllWorkflows from './activate-all-workflows'
-import checkBaseVersion from './check-base-version'
 import deactivatedWorkflows from './deactivated-workflows'
 
 dotenv.config()
 
 const octokit = new Octokit({ auth: process.env.GITHUB_API_TOKEN })
 
-const run = async () => {
-  try {
-    await checkBaseVersion()
-  } catch (error) {
-    console.error(error.message)
-    process.exit(1)
-  }
-
+const run = () => {
   const wrapErrorHandling = command => ({
     ...command,
     handler: async (...args) => {
@@ -33,13 +25,10 @@ const run = async () => {
       }
     },
   })
-  makeCli({
+
+  return makeCli({
     commands:
       [
-        {
-          handler: () => console.log(baseVersion),
-          name: 'base-version',
-        },
         {
           handler: clone,
           name: 'clone',
