@@ -1,4 +1,3 @@
-import basePackageConfig from '@dword-design/base/package.json'
 import chdir from '@dword-design/chdir'
 import { endent, fromPairs, keys, map, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
@@ -14,10 +13,6 @@ const self = require.resolve('./cli')
 
 export default tester(
   {
-    'base-version': async () =>
-      expect(
-        execa(self, ['base-version']) |> await |> property('stdout')
-      ).toEqual(basePackageConfig.version),
     push: async () => {
       const createRepo = async number => {
         await ensureDir(P.join('remotes', `repo${number}`))
