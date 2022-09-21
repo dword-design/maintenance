@@ -1,16 +1,19 @@
-import getUnneededBranches from './get-unneeded-branches'
 import { flatten, mapValues, values } from '@dword-design/functions'
+
+import getUnneededBranches from './get-unneeded-branches'
 
 export default async octokit => {
   console.log(
     getUnneededBranches(octokit)
       |> await
-      |> mapValues((repo, branches) => branches.map(branch => ({ repo, branch })))
+      |> mapValues((repo, branches) =>
+        branches.map(branch => ({ branch, repo }))
+      )
       |> values
       |> flatten
   )
 
-  /*const branches = getUnneededBranches(octokit)
+  /* const branches = getUnneededBranches(octokit)
     |> await
     |> mapValues((repo, branches) => branches.map(branch => ({ repo, branch })))
     |> values
@@ -21,5 +24,5 @@ export default async octokit => {
       ref: `heads/${branch.branch}`,
       repo: branch.repo,
     })
-  ))*/
+  )) */
 }

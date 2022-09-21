@@ -8,9 +8,9 @@ import { Octokit } from 'octokit'
 import { clone, push, remove, updateGithubWorkflows } from '.'
 import activateAllWorkflows from './activate-all-workflows'
 import deactivatedWorkflows from './deactivated-workflows'
-import merge from './merge'
-import getUnneededBranches from './get-unneeded-branches'
 import deleteUnneededBranches from './delete-unneeded-branches'
+import getUnneededBranches from './get-unneeded-branches'
+import merge from './merge'
 import rateLimit from './rate-limit'
 
 dotenv.config()
@@ -95,7 +95,6 @@ const run = () => {
                 'GitHub API token is missing in environment variables.'
               )
             }
-
             console.log(await getUnneededBranches(octokit))
           },
           name: 'unneeded-branches',
@@ -107,7 +106,6 @@ const run = () => {
                 'GitHub API token is missing in environment variables.'
               )
             }
-
             await deleteUnneededBranches(octokit)
           },
           name: 'delete-unneeded-branches',
