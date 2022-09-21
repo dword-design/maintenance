@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/dword-design/maintenance/compare/v2.1.11...v2.2.0) (2022-09-21)
+
+
+### Features
+
+* features ([#71](https://github.com/dword-design/maintenance/issues/71)) ([7f9bbd5](https://github.com/dword-design/maintenance/commit/7f9bbd5775a9a5f2362a3ee17384b2b3889e3908))
+
 ## [2.1.11](https://github.com/dword-design/maintenance/compare/v2.1.10...v2.1.11) (2022-09-19)
 
 
