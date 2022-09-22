@@ -2,9 +2,11 @@ import { pickBy } from '@dword-design/functions'
 import pFilter from 'p-filter'
 
 export default async octokit => {
-  const repos = await octokit.paginate(octokit.rest.repos.listForUser, {
-    username: 'dword-design',
-  })
+  const repos = await octokit
+    .paginate(octokit.rest.repos.listForUser, {
+      username: 'dword-design',
+    })
+    .filter(repo => !repo.fork && !repo.archived)
 
   return (
     repos.map(async repo => [

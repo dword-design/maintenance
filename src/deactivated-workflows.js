@@ -1,10 +1,12 @@
 import { filter, map, property } from '@dword-design/functions'
 
 export default async octokit => {
-  const repos = await octokit.paginate(octokit.rest.repos.listForUser, {
-    per_page: 100,
-    username: 'dword-design',
-  })
+  const repos = await octokit
+    .paginate(octokit.rest.repos.listForUser, {
+      per_page: 100,
+      username: 'dword-design',
+    })
+    .filter(repo => !repo.fork && !repo.archived)
 
   const result = {}
   for (const repo of repos) {

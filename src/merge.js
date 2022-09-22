@@ -50,46 +50,6 @@ export default async octokit => {
       }
     })
   )
-  // .filter(pullRequest => pullRequest.mergeable_state === 'clean')
-  // console.log(pullRequests)
-  /* const repos = await octokit.paginate(octokit.rest.repos.listForUser, {
-    username: 'dword-design',
-  })
-
-  const pullRequests = (
-    await Promise.all(
-      repos.map(async repo =>
-        Promise.all(
-          (
-            await octokit.paginate(octokit.rest.pulls.list, {
-              owner: repo.owner.login,
-              repo: repo.name,
-            })
-          )
-            .filter(
-              pullRequest =>
-                pullRequest.head.ref === 'renovate/lock-file-maintenance'
-            )
-            .map(pullRequest =>
-              octokit.rest.pulls.get({
-                owner: pullRequest.head.user.login,
-                pull_number: pullRequest.number,
-                repo: pullRequest.head.repo.name,
-              })
-            )
-        )
-      )
-    )
-  ).flat()
-  // console.log(JSON.stringify((await octokit.rest.pulls.list({ owner: 'dword-design', repo: 'buefy-svg-icon' })).data[0], undefined, 2))
-  console.log(pullRequests) */
-  /* pullRequests = pullRequests.map(pullRequest => {
-    const match = pullRequest.pull_request.url.match(/^https:\/\/api\.github\.com\/repos\/.*?\/(.*?)\/pulls\/(.*?)$/)
-    return { repo: match[1], number: parseInt(match[2], 10) }
-  })
-  pullRequests = await pFilter(pullRequests, pullRequest => isPullRequestStatusSuccessful(octokit, { owner: 'dword-design', repo: pullRequest.repo, ref: 'renovate/lock-file-maintenance' }))
-  console.log(pullRequests)
-  // console.log(JSON.stringify(pr, undefined, 2)) */
 
   // [ 'clean', 'unstable', 'dirty', 'blocked' ]
 
