@@ -9,6 +9,7 @@ import { clone, push, remove, updateGithubWorkflows } from '.'
 import activateAllWorkflows from './activate-all-workflows'
 import deactivatedWorkflows from './deactivated-workflows'
 import deleteUnneededBranches from './delete-unneeded-branches'
+import failing from './failing'
 import getUnneededBranches from './get-unneeded-branches'
 import merge from './merge'
 import rateLimit from './rate-limit'
@@ -130,6 +131,17 @@ const run = () => {
             )
           },
           name: 'rate-limit',
+        },
+        {
+          handler: async () => {
+            if (!process.env.GITHUB_API_TOKEN) {
+              throw new Error(
+                'GitHub API token is missing in environment variables.'
+              )
+            }
+            console.log(await failing(octokit))
+          },
+          name: 'failing',
         },
       ] |> map(wrapErrorHandling),
   })
