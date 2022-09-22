@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/dword-design/maintenance/compare/v2.2.0...v2.3.0) (2022-09-22)
+
+
+### Features
+
+* add failure command ([#73](https://github.com/dword-design/maintenance/issues/73)) ([6b0d4b3](https://github.com/dword-design/maintenance/commit/6b0d4b37bd66e16994f986ab5cd6c2a056c9e295))
+
 # [2.2.0](https://github.com/dword-design/maintenance/compare/v2.1.11...v2.2.0) (2022-09-21)
 
 
