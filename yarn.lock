@@ -3614,6 +3614,11 @@ commander@^8.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
   integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
+commander@^9.5.0:
+  version "9.5.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.5.0.tgz#bc08d1eb5cedf7ccb797a96199d41c7bc3e60d30"
+  integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
+
 commitizen@^4.0.3:
   version "4.2.5"
   resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-4.2.5.tgz#48e5a5c28334c6e8ed845cc24fc9f072efd3961e"
@@ -7384,13 +7389,21 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-make-cli@^2.0.0, make-cli@^2.0.7:
+make-cli@^2.0.0:
   version "2.0.15"
   resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-2.0.15.tgz#4d049e685754a9b62522e0b3c0c9e2dc8046b98b"
   integrity sha512-IRg1mC4GoJDTfjGiZuwN9rdeBvskP91jiU4ZKgR+yHmO4XXuhlhh4EofPvP7sg+4FFl37wVnDmUO7pwnx11oqQ==
   dependencies:
     "@dword-design/functions" "^4.0.0"
     commander "^8.0.0"
+
+make-cli@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-3.0.0.tgz#d3119d0b330294d3b21afab0684fc46a85de4a11"
+  integrity sha512-uhlJhvjcdytBdAm81FfTBBT+IDPcsP2+jPMylttkRlR3+YQWVwbjBIoXurhv4GAxgtRbYGhbR5Eca/d1x/+RXQ==
+  dependencies:
+    "@dword-design/functions" "^4.0.0"
+    commander "^9.5.0"
 
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
