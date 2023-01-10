@@ -1,8 +1,8 @@
 import { filter, map, property } from '@dword-design/functions'
 
 export default async octokit => {
-  const repos = octokit
-    .paginate(octokit.rest.repos.listForUser, {
+  const repos =
+    octokit.paginate(octokit.rest.repos.listForUser, {
       per_page: 100,
       username: 'dword-design',
     })
