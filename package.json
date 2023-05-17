@@ -33,7 +33,7 @@
     "octokit": "^2.0.7",
     "p-filter": "^2",
     "promise-sequential": "^1.1.1",
-    "std-env": "^2.3.0"
+    "std-env": "^3.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
